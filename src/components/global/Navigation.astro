@@ -10,8 +10,8 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
       class="relative flex flex-col w-full py-5 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6">
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <a href="/" class="text-black inline-flex items-center gap-3">
-          <OptimizedImage width={40} src="/logo.svg" alt="logo" />
-          <span class="font-bold">Syntro</span>
+          <OptimizedImage width={40} src="/logo.svg" alt="CycleLink logo" />
+          <span class="font-bold">CycleLink</span>
         </a>
         <button
           @click="open = !open"
@@ -47,32 +47,24 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
         id="main-navigation"
         class="flex-col items-center flex-grow gap-4 lg:gap-8 flex overflow-hidden lg:pb-0 lg:flex lg:justify-end lg:h-auto lg:flex-row">
         <a
-          class="text-sm text-black transition duration-300 hover:text-blue-600 lg:ml-auto"
-          href="/#features">
-          Features
+          class="text-sm text-black transition duration-300 hover:text-accent-600 lg:ml-auto"
+          href="#features">
+          서비스
         </a>
         <a
-          href="/"
-          class="text-sm text-black transition duration-300 hover:text-blue-600 relative">
-          Updates
-          <span
-            class="bg-red-600 ms-1 text-white text-[10px] px-2 py-1 rounded-full">
-            NEW
-          </span>
+          href="#about"
+          class="text-sm text-black transition duration-300 hover:text-accent-600">
+          소개
         </a>
         <a
-          href="/"
-          class="text-sm text-black transition duration-300 hover:text-blue-600 relative">
-          Changelog
-          <sup
-            class="ml-1 inline-block mt-1 w-1.5 h-1.5 bg-green-500 rounded-full">
-          </sup>
+          href="#pricing"
+          class="text-sm text-black transition duration-300 hover:text-accent-600">
+          요금제
         </a>
-
         <a
-          href="/faq"
-          class="text-sm text-black transition duration-300 hover:text-blue-600 relative">
-          Faq
+          href="#contact"
+          class="text-sm text-black transition duration-300 hover:text-accent-600">
+          문의
         </a>
 
         <div class="inline-flex items-center gap-2 list-none py-px lg:ml-auto">

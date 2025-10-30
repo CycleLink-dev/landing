@@ -3,44 +3,30 @@ import OptimizedImage from "../../layouts/utilities/OptimizedImage.astro";
 
 const sections = [
   {
-    title: "All pages",
+    title: "서비스",
     links: [
-      { name: "Home", href: "/" },
-      { name: "About", href: "/about" },
-      { name: "Features", href: "/features" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Contact", href: "/contact" },
+      { name: "중고거래", href: "#features" },
+      { name: "정비예약", href: "#features" },
+      { name: "커뮤니티", href: "#features" },
+      { name: "Link 사장님", href: "#pricing" },
     ],
   },
   {
-    title: "Company",
+    title: "회사",
     links: [
-      { name: "Careers", href: "/careers" },
-      { name: "Press", href: "/press" },
-      { name: "Blog", href: "/blog" },
-      { name: "Partners", href: "/partners" },
-      { name: "Terms", href: "/terms" },
-      { name: "Privacy", href: "/privacy" },
+      { name: "회사소개", href: "#about" },
+      { name: "팀 소개", href: "#team" },
+      { name: "로드맵", href: "#roadmap" },
+      { name: "문의하기", href: "#contact" },
     ],
   },
   {
-    title: "Developers",
+    title: "지원",
     links: [
-      { name: "Documentation", href: "/docs" },
-      { name: "API Reference", href: "/api" },
-      { name: "Status", href: "/status" },
-      { name: "Github", href: "https://github.com/bekturaslan/syntro-astro" },
-      { name: "Changelog", href: "/changelog" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { name: "Help Center", href: "/help" },
-      { name: "Community", href: "/community" },
-      { name: "Contact Support", href: "/support" },
-      { name: "Live Chat", href: "/chat" },
+      { name: "이용약관", href: "/terms" },
+      { name: "개인정보처리방침", href: "/privacy" },
+      { name: "자주 묻는 질문", href: "/faq" },
+      { name: "문의하기", href: "mailto:jwc@cyclelink.co.kr" },
     ],
   },
 ];
@@ -52,33 +38,33 @@ const sections = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       <div class="md:col-span-1">
         <a href="/" class="inline-flex items-center gap-3">
-          <OptimizedImage width={40} src="/logo.svg" alt="logo" />
-          <span class="text-lg font-semibold text-black">Syntro</span>
+          <OptimizedImage width={40} src="/logo.svg" alt="CycleLink logo" />
+          <span class="text-lg font-semibold text-black">CycleLink</span>
         </a>
         <p class="mt-4 text-sm text-gray-500">
-          Open-source SaaS starter built with Astro & Tailwind CSS. Customize
-          freely and deploy with ease.
+          중고거래부터 정비예약까지,<br />
+          라이더를 위한 올인원 플랫폼
         </p>
       </div>
 
       <div class="md:col-span-2">
         <h3 class="text-lg font-semibold text-black mb-2">
-          Subscribe to our newsletter
+          뉴스레터 구독
         </h3>
         <p class="text-sm text-gray-500 mb-4">
-          Join 1,000+ developers and get product updates, tips, and insights in
-          your inbox.
+          CycleLink의 최신 소식과 업데이트를<br />
+          가장 먼저 만나보세요.
         </p>
         <form class="flex flex-col sm:flex-row items-center gap-3 w-full">
           <input
             type="email"
-            placeholder="Your email address"
-            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            placeholder="이메일 주소를 입력하세요"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-accent-500 focus:outline-none"
           />
           <button
             type="submit"
-            class="px-6 py-2 w-full md:w-auto rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">
-            Subscribe
+            class="px-6 py-2 w-full md:w-auto rounded-md bg-accent-600 text-white hover:bg-accent-700 transition">
+            구독하기
           </button>
         </form>
       </div>
@@ -108,15 +94,8 @@ const sections = [
     <div
       class="pt-12 mt-12 border-t border-base-200 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
       <p>
-        &copy; {new Date().getFullYear()} Your Company Name. Crafted by Michael Andreuzza
-        &
-        <a
-          href="https://getastrothemes.com/free-astro-themes-templates/"
-          class="underline text-blue-600 hover:text-blue-800">
-          Getastrothemes
-        </a>
+        &copy; {new Date().getFullYear()} CycleLink. All rights reserved.
       </p>
-      <p>Additionally Development by Bektur Aslan</p>
     </div>
   </div>
 </footer>

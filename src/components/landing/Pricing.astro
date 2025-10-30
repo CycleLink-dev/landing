@@ -1,51 +1,21 @@
-<section class="pt-20" x-data="{duration: 'monthly'}">
+<section id="pricing" class="pt-20">
   <div class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8">
     <div class="max-w-xl text-center mx-auto">
       <p class="text-sm leading-normal font-bold uppercase text-accent-600">
-        Tagline
+        요금제
       </p>
       <h2
         class="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl capitalize lg:text-4xl mt-4 font-medium text-base-900 lg:text-balance">
-        Equip your business
+        Link 사장님 구독 서비스
       </h2>
       <p
         class="text-base leading-normal mt-4 text-base-500 font-medium lg:text-balance">
-        Choose a plan that works the best for you and your team.
+        정비 매장을 위한 스마트 운영 솔루션
       </p>
-      <div
-        aria-labelledby="pricing-toggle"
-        class="w-full relative mt-8 ring-1 ring-base-200 ring-offset-2 bg-white overflow-hidden justify-center gap-4 mx-auto lg:mx-0 inline-flex p-1 rounded-md max-w-52 shadow z-0">
-        <!-- Monthly Pricing Button: Sets 'duration' to 'monthly' when clicked -->
-        <!-- Sliding background -->
-        <div
-          class="absolute inset-0 bg-base-50 rounded-md transition-transform duration-200 ease-in-out"
-          :class="duration === 'monthly' ? 'w-1/2 translate-x-0' : 'w-1/2 translate-x-full'">
-        </div>
-        <!-- Monthly Pricing Button -->
-        <button
-          id="monthly-pricing-button"
-          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
-          :class="duration === 'monthly' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
-          @click="duration = 'monthly'"
-          type="button"
-          :aria-pressed="duration === 'monthly'">
-          Monthly
-        </button>
-        <!-- Annual Pricing Button -->
-        <button
-          id="annual-pricing-button"
-          class="relative flex items-center justify-center w-full px-2 h-6 text-xs font-medium focus:outline-none transition-colors duration-300 z-10"
-          :class="duration === 'annual' ? 'text-accent-600' : 'text-base-500 hover:text-accent-500'"
-          @click="duration = 'annual'"
-          type="button"
-          :aria-pressed="duration === 'annual'">
-          Annual
-        </button>
       </div>
-    </div>
     <div
-      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-12 mx-auto">
-      <!-- Tier one -->
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 mt-12 mx-auto max-w-4xl">
+      <!-- FREE 플랜 -->
       <div
         class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-base-50 ring-4 ring-base-50 border border-base-200">
         <div>
@@ -54,320 +24,84 @@
               <div>
                 <h3
                   class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-base-900">
-                  Core
+                  FREE
                 </h3>
                 <p class="text-base leading-normal font-medium text-base-500">
-                  For individuals
+                  기본 운영 솔루션
                 </p>
               </div>
             </div>
             <p class="text-base leading-normal font-medium text-base-500">
-              This subscription tier caters to individuals and hobbyists seeking
-              features.
+              예약 관리부터 기본 고객 관리까지 무료로 제공되는 필수 기능
             </p>
           </div>
         </div>
         <div class="p-8">
           <p
             class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-base-900">
-            <span
-              data-monthly="$29.00"
-              data-annual="$19.00"
-              x-text="$el.dataset[duration]">
-            </span>
-            <span
-              class="text-sm font-normal font-sans tracking-normal text-base-500">
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none">
-                /annually
-              </span>
-            </span>
+            <span>무료</span>
           </p>
           <div class="w-full mt-4">
             <a
-              href="https://github.com/bekturaslan/syntro-astro"
+              href="mailto:jwc@cyclelink.co.kr?subject=Link 사장님 FREE 플랜 신청"
               class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full">
-              Get Started
+              무료로 시작하기
             </a>
           </div>
           <div class="mt-8">
             <p
               class="text-sm leading-normal font-medium uppercase text-base-500">
-              Core plan includes:
+              FREE 플랜 포함 기능:
             </p>
             <ul class="flex flex-col mt-4 gap-y-3 text-base-500" role="list">
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Unlimited members</span>
+                <span class="text-base leading-normal">예약 출동 관리</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">1 Team</span>
+                <span class="text-base leading-normal">리스크 관리 서비스</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">50 issues</span>
+                <span class="text-base leading-normal">알림/리마인드 서비스</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">
-                  Slack, GitHub, and API access
-                </span>
+                <span class="text-base leading-normal">고객 컨소시엄 관리</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">
-                  Basic reporting tools
-                </span>
+                <span class="text-base leading-normal">장바구니 서비스</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Community support</span>
+                <span class="text-base leading-normal">프로모션 제공</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">
-                  Basic customization options
-                </span>
+                <span class="text-base leading-normal">리뷰 관리 서비스</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <!-- Tier two -->
-      <div
-        class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-base-950 ring-4 ring-base-50 border border-base-200">
-        <div>
-          <div
-            class="flex flex-col gap-4 p-8 bg-white/10 rounded-[1.3rem] h-full">
-            <div class="flex items-start justify-between w-full">
-              <div>
-                <h3
-                  class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-white">
-                  Momentum
-                </h3>
-                <p class="text-base leading-normal font-medium text-base-100">
-                  For startups
-                </p>
-              </div>
-              <span
-                class="inline-flex items-center font-medium relative text-base-700 bg-base-50 px-2.5 py-1 text-xs rounded-md">
-                Popular
-              </span>
-            </div>
-            <p class="text-base leading-normal font-medium text-base-100">
-              Tailored for expanding businesses, this tier offers advanced tools
-              and analytics.
-            </p>
-          </div>
-        </div>
-        <div class="p-8">
-          <p
-            class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white">
-            <span
-              data-monthly="$49.00"
-              data-annual="$39.00"
-              x-text="$el.dataset[duration]">
-            </span>
-            <span
-              class="text-sm font-normal font-sans tracking-normal text-white/50">
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none">
-                /annually
-              </span>
-            </span>
-          </p>
-          <div class="w-full mt-4">
-            <a
-              href="https://github.com/bekturaslan/syntro-astro"
-              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full">
-              Get Started
-            </a>
-          </div>
-          <div class="mt-8">
-            <p
-              class="text-sm leading-normal font-medium uppercase text-base-100">
-              Momentum plan includes:
-            </p>
-            <ul class="flex flex-col mt-4 gap-y-3 text-base-100" role="list">
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">Unlimited teams</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">
-                  Private teams and guests
-                </span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">Insights</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">
-                  Custom branding options
-                </span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">
-                  Collaboration tools
-                </span>
-              </li>
-              <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
-                </svg>
-                <span class="text-base leading-normal">Mobile app access</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- Tier three -->
+
+      <!-- PRO 플랜 -->
       <div
         class="flex flex-col h-full p-1 lg:py-1 rounded-3xl bg-accent-700 ring-4 ring-base-50 border border-base-200">
         <div>
@@ -377,141 +111,94 @@
               <div>
                 <h3
                   class="text-lg leading-normal sm:text-xl md:text-2xl font-medium text-white">
-                  Growth
+                  PRO
                 </h3>
                 <p class="text-base leading-normal font-medium text-base-100">
-                  For corporates
+                  AI 기반 고급 분석 솔루션
                 </p>
               </div>
+              <span
+                class="inline-flex items-center font-medium relative text-accent-700 bg-white px-2.5 py-1 text-xs rounded-md">
+                인기
+              </span>
             </div>
             <p class="text-base leading-normal font-medium text-base-100">
-              Designed for established businesses, providing comprehensive
-              tools.
+              AI 분석을 통한 데이터 기반 의사결정 지원으로 매장 성장을 가속화
             </p>
           </div>
         </div>
         <div class="p-8">
           <p
             class="font-semibold flex lg:text-3xl items-baseline text-2xl tracking-tighter text-white">
-            <span
-              data-monthly="$99.00"
-              data-annual="$79.00"
-              x-text="$el.dataset[duration]">
-            </span>
-            <span
-              class="text-sm font-normal font-sans tracking-normal text-accent-100">
-              <span x-show="duration === 'monthly'">/month</span>
-              <span x-show="duration === 'annual'" style="display: none">
-                /annually
-              </span>
-            </span>
+            <span>월 19,900원</span>
           </p>
           <div class="w-full mt-4">
             <a
-              href="https://github.com/bekturaslan/syntro-astro"
-              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-500 bg-white hover:text-accent-500 ring-1 ring-base-200 focus:ring-accent-500 h-9 px-4 py-2 text-sm font-medium rounded-md w-full">
-              Get Started
+              href="mailto:jwc@cyclelink.co.kr?subject=Link 사장님 PRO 플랜 신청"
+              class="flex items-center justify-center transition-all duration-200 focus:ring-2 focus:outline-none text-base-700 bg-white hover:bg-gray-50 focus:ring-base-500/50 h-9 px-4 py-2 text-sm font-medium rounded-md w-full">
+              PRO 플랜 신청하기
             </a>
           </div>
           <div class="mt-8">
             <p
               class="text-sm leading-normal font-medium uppercase text-base-100">
-              Growth plan includes:
+              PRO 플랜 포함 기능:
             </p>
             <ul class="flex flex-col mt-4 gap-y-3 text-base-100" role="list">
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Unlimited members</span>
+                <span class="text-base leading-normal">FREE 플랜 모든 기능 포함</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Advanced analytics</span>
+                <span class="text-base leading-normal">AI 월간 매장 정비 리포트</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Priority support</span>
+                <span class="text-base leading-normal">운영 전략 제안서</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">
-                  Custom API integration
-                </span>
+                <span class="text-base leading-normal">수요 예측 & 솔루션 최적화</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Unlimited storage</span>
+                <span class="text-base leading-normal">동지역 경쟁 수준 분석</span>
               </li>
               <li class="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check size-4">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M5 12l5 5l10 -10"></path>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span class="text-base leading-normal">Enhanced security</span>
+                <span class="text-base leading-normal">전체 협약점 정비 리포트</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-base leading-normal">최신 정비 가이드 제공</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-base leading-normal">표준 작업 지침(SOP)</span>
               </li>
             </ul>
+          </div>
+          <div class="mt-6 p-4 bg-white/10 rounded-lg">
+            <p class="text-sm font-semibold text-white text-center">
+              기대 효과: 수익 증가, 마케팅 & 운영 효율 증가
+            </p>
           </div>
         </div>
       </div>
